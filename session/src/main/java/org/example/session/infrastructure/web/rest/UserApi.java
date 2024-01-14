@@ -22,6 +22,6 @@ public class UserApi {
             @RequestBody UserSignupRequest request
     ) {
         userService.signup(request);
-        return new ResponseEntity<>(null, HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }
