@@ -11,4 +11,9 @@ public class FilterConfig {
     public LoginFilter loginFilter(AuthenticationManager authenticationManager, ObjectMapper objectMapper) {
         return new LoginFilter(authenticationManager, objectMapper);
     }
+
+    @Bean
+    public UnauthenticatedHandler unauthenticatedHandler(ObjectMapper objectMapper) {
+        return new UnauthenticatedHandler(objectMapper);
+    }
 }
